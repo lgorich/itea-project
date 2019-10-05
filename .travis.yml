@@ -12,6 +12,11 @@ branches:
 
 deploy:
   provider: heroku
+  skip_cleanup: true
   api_key:
     secure: "1c467b67-6dea-4191-81b8-b256aa77e685"
   app: itea-project
+  on:
+    branch: master
+    tags: false
+    condition: "$TRAVIS_TAG =~ -release$"

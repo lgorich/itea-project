@@ -6,10 +6,6 @@ before_install:
 - npm install -g @angular/cli
 install: npm install
 
-branches:
-  only:
-  - master
-
 deploy:
   provider: heroku
   skip_cleanup: true
@@ -17,5 +13,6 @@ deploy:
     secure: "1c467b67-6dea-4191-81b8-b256aa77e685"
   app: itea-project
   on:
+    branch: master
     tags: true
     condition: "$TRAVIS_TAG =~ -release$"

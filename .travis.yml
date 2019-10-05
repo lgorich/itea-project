@@ -18,5 +18,5 @@ deploy:
   app: itea-project
   on:
     branch: master
-    tags: false
+    tags: true
     condition: "$TRAVIS_TAG =~ -release$"
